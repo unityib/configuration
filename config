@@ -34,6 +34,16 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 1 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 1 # decrease screen brightness
+
+
+
+
+#increase brightness
+#bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+
+#bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
 #wallpaper startup
 exec --no-startup-id nitrogen --restore
@@ -41,8 +51,9 @@ exec --no-startup-id nitrogen --restore
 #programs startup
 exec --no-startup-id google-chrome
 exec --no-startup-id code
-exec --no-startup-id telegram-desktop
+#exec --no-startup-id telegram-desktop
 exec --no-startup-id firefox
+exec --no-startup-id discord
 
 
 #programs workspace bind
@@ -50,6 +61,7 @@ assign [class="Google-chrome"] $ws1
 assign [class="Code"] $ws2
 assign [class="firefox"] $ws3
 assign [class="TelegramDesktop"] $ws4
+assign [class="discord"] $ws5
 
 ## Screenshots
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
