@@ -37,8 +37,11 @@ exec --no-startup-id nm-applet
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 1 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 1 # decrease screen brightness
 
+# keybinding to lock screen
+bindsym Control+Mod1+l exec "i3lock -c 000000"
+#bindsym $mod+Control+l exec i3lock -i /home/wallpapers/cy.png
 
-
+# auto lock the screen
 
 #increase brightness
 #bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
