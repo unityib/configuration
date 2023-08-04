@@ -51,18 +51,16 @@ bindsym Control+Mod1+l exec "i3lock -c 000000"
 
 #bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
-
-
 #wallpaper startup
 exec --no-startup-id nitrogen --restore
 
 #programs startup
-exec --no-startup-id google-chrome
-exec --no-startup-id ./logseq  
+#exec --no-startup-id google-chrome
 #exec --no-startup-id code
 #exec --no-startup-id telegram-desktop
 #exec --no-startup-id firefox
 #exec --no-startup-id discord
+exec --no-startup-id ./logseq 
 
 
 #programs workspace bind
@@ -71,8 +69,8 @@ assign [class="Code"] $ws2
 assign [class="firefox"] $ws3
 assign [class="TelegramDesktop"] $ws4
 assign [class="discord"] $ws5
+#assign [class="Opera"] $ws8
 assign [class="Logseq"] $ws8
-
 ## Screenshots
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
 bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
