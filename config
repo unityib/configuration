@@ -5,6 +5,11 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+#changing border sizes old way default_border pixel 1; default_floating_border pixel 1;
+
+#changing border sizes
+for_window [class="^.*"] border pixel 2
+
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
@@ -34,6 +39,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+#adjust brightness installing(sudo apt install light) command to work(sudo chmod +s /usr/bin/light)
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 8 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 8 # decrease screen brightness
 
@@ -62,6 +68,9 @@ exec --no-startup-id nitrogen --restore
 #exec --no-startup-id discord
 #exec --no-startup-id ./logseq 
 exec --no-startup-id obsidian 
+exec --no-startup-id gnome-clocks 
+exec --no-startup-id anki
+exec --no-startup-id doublecmd
 
 
 #programs workspace bind
@@ -69,9 +78,12 @@ assign [class="Google-chrome"] $ws1
 assign [class="Code"] $ws2
 assign [class="firefox"] $ws3
 assign [class="TelegramDesktop"] $ws4
+assign [class="Doublecmd"] $ws4
 assign [class="discord"] $ws5
 #assign [class="Opera"] $ws8
 assign [class="obsidian"] $ws8
+assign [class="clocks"] $ws9
+assign [class="Anki"] $ws7
 ## Screenshots
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
 bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
@@ -106,6 +118,7 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+
 
 # change focus
 bindsym $mod+h focus left
@@ -201,6 +214,8 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -227,6 +242,10 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+#gaps
+
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
