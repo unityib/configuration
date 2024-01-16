@@ -2,3 +2,4 @@ ranger #terminal file manager
 thunar #gui file manager. To setup thunar as default file manager command: "xdg-mime default thunar.desktop inode/directory"
 nitrogen #wallpaper manager #auto restore the wallpaper exec --no-startup-id nitrogen --restore
 light #for screen brightness control 
+urxvt #terminal
