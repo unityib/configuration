@@ -1,28 +1,9 @@
+
 !this is the config file for urxvt#
 
 !to update and save changes made in config file write: xrdb -merge ~/.Xresources
 !after this write urxvt to update settings
-
-
-URxvt.font: xft:cousine:size=12
-
-! special
-URxvt.background: #24273A
-!this is the config file for urxvt#
-
-!to update and save changes made in config file write: xrdb -merge ~/.Xresources
-!after this write urxvt to update settings
-
-
-URxvt.font: xft:cousine:size=12
-
-! special
-URxvt.background: #24273A
-!this is the config file for urxvt#
-
-!to update and save changes made in config file write: xrdb -merge ~/.Xresources
-!after this write urxvt to update settings
-
+!to choose the default terminal: sudo update-alternatives --config x-terminal-emulator
 
 URxvt.font: xft:cousine:size=12
 
