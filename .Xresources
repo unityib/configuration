@@ -12,6 +12,9 @@ URxvt.background: #24273A
 URxvt.foreground: #CAD3F5
 URxvt.cursorColor: #F4DBD6
 
+!scrollbar
+URxvt.scrollBar: false
+
 ! black
 URxvt.color0: #494D64
 URxvt.color8: #5B6078
@@ -50,3 +53,10 @@ URxvt.lineSpace: 0
 URxvt.geometry: 92x24
 URxvt.internalBorder: 24
 URxvt.cursorBlink: true
+
+
+!transparency
+
+URxvt*transparent: true
+URxvt*shading: 30
+
