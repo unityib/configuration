@@ -59,6 +59,8 @@ bindsym Control+Mod1+l exec "i3lock -c 000000"
 
 #wallpaper startup
 exec --no-startup-id nitrogen --restore
+exec vlc --media-library /home/unity/Downloads/streamlabsWallpaper --fullscreen --loop
+
 
 #programs startup
 #exec --no-startup-id google-chrome
@@ -71,7 +73,7 @@ exec --no-startup-id obsidian
 exec --no-startup-id gnome-clocks 
 exec --no-startup-id anki
 exec --no-startup-id doublecmd
-
+exec --no-startup-id virt-manager
 
 #programs workspace bind
 assign [class="Google-chrome"] $ws1
@@ -79,6 +81,7 @@ assign [class="Code"] $ws2
 assign [class="firefox"] $ws3
 assign [class="TelegramDesktop"] $ws4
 assign [class="Doublecmd"] $ws4
+assign [class="Virt-manager"] $ws4
 assign [class="discord"] $ws5
 #assign [class="Opera"] $ws8
 assign [class="obsidian"] $ws8
